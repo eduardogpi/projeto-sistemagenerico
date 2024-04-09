@@ -1,0 +1,37 @@
+<div class="card mt-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+
+        <h4>Cadastro Serviço</h4>
+        <button type="button" class="btn btn-outline-secondary ret-cadastro"><i class="bi bi-reply-fill"></i></button>
+    </div>
+    <div class="card-body">
+        <form id="formCadastroServico">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <label for="codigo" class="form-label">Código:</label>
+                    <input type="text" class="form-control" name="codigo">
+                </div>
+                <div class="col-sm-12 col-md-9">
+                    <label for="descricao" class="form-label">Descrição:</label>
+                    <input type="text" class="form-control" name="descricao">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <label for="custo" class="form-label">Custo:</label>
+                    <input type="text" class="form-control" name="custo">
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <label for="valor" class="form-label">Valor:</label>
+                    <input type="text" class="form-control" name="valor">
+                </div>
+            </div>
+            <div class="row m-3">
+                <div class="col-12 d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" id="salvarServico">Salvar</button>
+                    <button type="button" class="btn btn-danger ms-2" id="limparServico">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

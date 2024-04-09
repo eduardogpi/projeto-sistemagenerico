@@ -1,0 +1,102 @@
+<div class="card mt-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+
+        <h4>Cadastro Funcionário</h4>
+        <button type="button" class="btn btn-outline-secondary"><i class="bi bi-reply-fill"></i></button>
+    </div>
+    <div class="card-body">
+        <form id="formCadastroFuncionario">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <label for="dtIngresso" class="form-label">Data de Ingresso:</label>
+                    <input type="date" name="dtIngresso" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="situacao" class="form-label">Situação:</label>
+                    <select name="situacao" class="form-select">
+                        <option value="ATIVO">ATIVO</option>
+                        <option value="INATIVO">INATIVO</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <label class="form-label" for="nomeFuncionario">Nome:</label>
+                    <input type="text" name="nomeFuncionario" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="cpfFuncionario" class="form-label">CPF:</label>
+                    <input type="text" name="cpfFuncionario" class="form-control"
+                        placeholder="000.000.000-00">
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <label for="dtNascFuncionario" class="form-label">Data de Nascimento:</label>
+                    <input type="date" name="dtNascFuncionario" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-1">
+                    <label for="sexoFuncionario" class="form-label">Sexo:</label>
+                    <select name="sexoFuncionario" class="form-select">
+                        <option value="F">F</option>
+                        <option value="M">M</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="celFuncionario" class="form-label">Celular:</label>
+                    <input type="text" name="celFuncionario" class="form-control"
+                        placeholder="(00)90000-0000">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="telFuncionario" class="form-label">Telefone:</label>
+                    <input type="text" name="telFuncionario" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <label for="emailFuncionario" class="form-label">E-mail:</label>
+                    <input type="email" name="emailFuncionario" class="form-control"
+                        placeholder="exemplo@exemplo.com.br">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="cepFuncionario" class="form-label">CEP:</label>
+                    <input type="text" name="cepFuncionario" class="form-control" placeholder="00.000-00">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="ufFuncionario" class="form-label">UF:</label>
+                    <select name="ufFuncionario"  class="form-select">
+                        <option value="GO">GO</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <label for="cidFuncionario" class="form-label">Cidade:</label>
+                    <select name="cidFuncionario" class="form-select">
+                        <option value="Anápolis">ANÁPOLIS</option>
+                        <option value="Goiânia">GOIÂNIA</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <label for="logradFuncionario" class="form-label">Logradouro:</label>
+                    <input type="text" name="logradFuncionario" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="numFuncionario" class="form-label">Número:</label>
+                    <input type="text" name="numero" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label for="bairroFuncionario" class="form-label">Bairro:</label>
+                    <input type="text" name="bairroFuncionario" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label for="complementoFuncionario" class="form-label">Complemento:</label>
+                    <input type="text" name="complementoFuncionario" class="form-control">
+                </div>
+            </div>
+            <div class="row mt-3 ">
+                <div class="col-sm-12 col-md-12 d-flex justify-content-end">
+                    <button class="btn btn-danger me-2 shadow-navbar" type="button" id="limparFuncionario">
+                        Cancelar
+                    </button>
+                    <button class="btn btn-primary shadow-navbar" type="button" id="salvarFuncionario">
+                        Salvar
+                    </button>
+                </div>
+        </form>
+    </div>
+</div>

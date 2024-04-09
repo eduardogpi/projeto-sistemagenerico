@@ -1,0 +1,119 @@
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+
+        <h4>Cadastro Transportadora</h4>
+        <button type="button" class="btn btn-outline-secondary ret-cadastro"><i class="bi bi-reply-fill"></i></button>
+    </div>
+    <div class="card-body">
+        <form id="formCadastroTransportadora">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 gap-2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cpfoucnpj" value="cpf">
+                        <label class="form-check-label" for="cpfoucnpj">CPF</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cpfoucnpj" value="cnpj">
+                        <label class="form-check-label" for="cpfoucnpj">CNPJ</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <label class="form-label" for="nomeTransportadora">Nome:</label>
+                    <input type="text" name="nomeTransportadora" class="form-control" placeholder="Ex. JOÃO DA SILVA"
+                        style="text-transform: uppercase;">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="cpfTransportadora" class="form-label">CPF:</label>
+                    <input type="text" name="cpfTransportadora" class="form-control" placeholder="000.000.000-00">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <label for="dtNasc" class="form-label">Data de Nascimento:</label>
+                    <input type="date" name="dtNasc" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <label for="sexoTransportadora" class="form-label">Sexo:</label>
+                    <select name="sexoTransportadora" class="form-select">
+                        <option value="F">F</option>
+                        <option value="M">M</option>
+                    </select>
+
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="celTransportadora" class="form-label">Celular:</label>
+                    <input type="text" name="celTransportadora" class="form-control" placeholder="(00)90000-0000">
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <label for="telTransportadora" class="form-label">Telefone:</label>
+                    <input type="text" name="telTransportadora" class="form-control" placeholder="(00) 0000-0000">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <label for="emailTransportadora" class="form-label">E-mail:</label>
+                    <input type="email" name="emailTransportadora" class="form-control"
+                        placeholder="exemplo@exemplo.com" style="text-transform: lowercase;">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="cepTransportadora" class="form-label">CEP:</label>
+                    <input type="text" name="cepTransportadora" class="form-control" placeholder="00.000-00">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <label for="ufTransportadora" class="form-label">UF:</label>
+                    <select name="ufTransportadora" class="form-select">
+                        <option value="SELEC">SELECIONE</option>
+                        <option value="GO">GO</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <label for="cidTransportadora" class="form-label">Cidade:</label>
+                    <select name="cidTransportadora" class="form-select">
+                        <option value="SELEC">SELECIONE</option>
+                        <option value="Anápolis">Anápolis</option>
+                        <option value="Goiânia">Goiânia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <label for="logradTransportadora" class="form-label">Logradouro:</label>
+                    <input type="text" name="logradTransportadora" class="form-control"
+                        style="text-transform: uppercase;">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="numTransportadora" class="form-label">Número:</label>
+                    <input type="text" name="numTransportadora" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <label for="bairroTransportadora" class="form-label">Bairro:</label>
+                    <input type="text" name="bairroTransportadora" class="form-control"
+                        style="text-transform: uppercase;">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label for="complementoTransportadora" class="form-label">Complemento:</label>
+                    <input type="text" name="complementoTransportadora" class="form-control"
+                        style="text-transform: uppercase;">
+                </div>
+            </div>
+
+    </div>
+    <div class="row m-3">
+        <div class="col-sm-12 col-md-12 d-flex justify-content-end">
+            <button class="btn btn-danger me-2 shadow-navbar" type="button" id="limparTransportadora">
+                Cancelar
+            </button>
+            <button class="btn btn-primary shadow-navbar" type="button" id="salvarTransportadora">
+                Salvar
+            </button>
+        </div>
+        </form>
+    </div>
+</div>

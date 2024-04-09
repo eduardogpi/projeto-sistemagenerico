@@ -1,0 +1,53 @@
+<div class="card mt-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h4>Permissões Funcionário</h4>
+        <button type="button" class="btn btn-outline-secondary"><i class="bi bi-reply-fill"></i></button>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <label for="" class="form-label">Pesquisar:</label>
+                <input type="text" name="pesquisarFuncionario" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4 d-flex align-items-end">
+                <button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <label for="" class="form-label">Usuário:</label>
+                <input type="text" name="usuario" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <label for="" class="form-label">Senha:</label>
+                <input type="password" name="senha" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <label for="" class="form-label">Situação:</label>
+                <select name="situacao" class="form-select">
+                    <option value="ATI">ATIVO</option>
+                    <option value="INA">INATIVO</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="list-group mt-2 list-group-flush">
+                <li class="list-group-item">
+                    <h4>Clientes</h4>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Ler</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
+                        <label class="form-check-label" for="flexSwitchCheckDefault2">Cadastrar</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
