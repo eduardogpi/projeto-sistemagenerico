@@ -9,7 +9,113 @@
         <form class="form" id="formVenda">
             <div class="row">
                 <div class="col-sm-12 col-md-8">
-                    
+                    <label for="nomeCliente" class="form-label">Nome:</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="nomeCliente" name="nomeCliente"
+                            aria-label="nomeCliente" aria-describedby="button-addon2">
+                        <button class="btn btn-secondary" type="button" id="pesqCliente2" style="border-top: 1px solid rgb(215, 215, 215); border-right:1px solid rgb(215, 215, 215); border-bottom:1px solid rgb(215, 215, 215)"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="cpfCliente" class="form-label">CPF:</label>
+                    <input type="text" name="cpfCliente" id="cpfCliente" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <label for="endCliente" class="form-label">Endereço:</label>
+                    <input type="text" name="endCliente" id="endCliente" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="celCliente" class="form-label">Celular:</label>
+                    <input type="text" name="celCliente" id="celCliente" class="form-control">
+                </div>
+            </div>
+            <hr>
+            
+            <div class="row">
+                <div class="col-sm-12 col-md-12 d-flex align-items-end justify-content-center">
+                    <button type="button" class="btn btn-secondary d-sm-block">Adicionar Item</button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Cód</th>
+                                <th>Descrição</th>
+                                <th>Qtd.</th>
+                                <th>Vl. Un.</th>
+                                <th>Vl. Tot.</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cpitensOrdem">
+                            <tr>
+                                <td colspan="5" class="text-center">Nada ainda</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="col-sm-6 col-md-2 offset-md-8 d-flex justify-content-end align-items-center">
+                    <label for="totalServico" class="form-label">Total:</label>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <input type="text" name="totalServico" id="totalServico" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <label for="formaPagamento" class="form-label">Forma de Pagamento</label>
+                    <select name="formaPagamento" id="formaPagamento" class="form-select">
+                        <option value="SEL">SELECIONE</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <label for="valorPagamento" class="form-label">Valor Pago:</label>
+                    <input type="text" name="valorPagamento" id="valorPagamento" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <label for="dataVencimento" class="form-label">Data Venc.:</label>
+                    <input type="date" name="dataVencimento" id="dataVencimento" class="form-control">
+                </div>
+                <div class="col-sm-12 col-md-1 d-flex align-items-end">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkPago">
+                        <label class="form-check-label" for="checkPago">
+                          PAGO
+                        </label>
+                      </div>
+                </div>
+                <div class="col-sm-12 col-md-3 d-flex align-items-end justify-content-end">
+                    <button class="btn btn-primary" id="adicionarForma" type="button">Adicionar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Forma de Pagamento</th>
+                                    <th>Data</th>
+                                    <th>Valor</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cpitensPagamento">
+                                <tr>
+                                    <td colspan="4" class="text-center">Nada aqui</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row m-3">
+                <div class="col-sm-12 col-md-4 offset-md-8 d-flex justify-content-end">
+                    <button class="btn btn-primary" id="salvarOS" type="button">Finalizar OS</button>
                 </div>
             </div>
         </form>
