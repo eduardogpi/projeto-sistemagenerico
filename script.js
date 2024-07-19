@@ -6,17 +6,28 @@ var nvecollapse = new bootstrap.Collapse('#sidebarMenu', {
 
 
 function carregarPagina(url, dom_fragment_recipient) {
-    if (url == undefined) { alert('sem url ainda...'); return }
-    if (url == 'home') { dom_fragment_recipient.innerHTML = ''; nvecollapse.hide(); return }
+    if (url == undefined) { 
+        alert('sem url ainda...'); 
+        return;
+    }
+    if (url == 'home') {
+        dom_fragment_recipient.innerHTML = '';
+        /* Quando o menu está no mobile, evita que ele fique colapsado */
+        nvecollapse.hide();
+        return;
+    }
+
     fetch(url).then(function (response) {
         return response.text();
     }).then(function (html) {
         dom_fragment_recipient.innerHTML = html;
+        /* Quando o menu está no mobile, evita que ele fique colapsado */
         nvecollapse.hide();
+
         dom_fragment_recipient.addEventListener('click', function (e) {
             e.preventDefault();
             if (e.target.classList.contains('btn-outline-dark')) {
-                modalPage(e.target?.id);
+                containPage(e.target?.id);
             }
 
         })
@@ -34,6 +45,7 @@ paginas = {
     'configuracoes': 'frontend/configuracoes/configuracoeIndex.html',
     'entradas': 'frontend/entradas/entradaIndex.html'
 }
+/* Efeito de menu ativo e carregamento de paginas principais */
 menu = document.getElementById('menu');
 menu.addEventListener('click', function (e) {
     e.preventDefault();
@@ -42,29 +54,38 @@ menu.addEventListener('click', function (e) {
     carregarPagina(paginas[e.target.id], main);
 })
 
-let modalTelas = new bootstrap.Modal(document.getElementById('modalTelas'))
+var modalTelas = new bootstrap.Modal(document.getElementById('modalTelas'))
 modalTelas.dialog_ = document.querySelector('.modal-dialog');
 modalTelas.title_ = document.querySelector('.modal-title');
 modalTelas.body_ = document.querySelector('.modal-body');
 
-
-function modalPage(page) {
+/*
+    modalTelas.title_.innerText = 'Titulo ao portador';  
+    modalTelas.body_.innerHTML = `<div><a class="nav-link" href="#">Teste de link</a></div>`; 
+    modalTelas.show();
+*/
+/* Carrega cada pagina interna especifica */
+function containPage(page) {
+    /* Separa a pasta */
     let fold = page.split('_')[0];
+    /* Separa a pagina */
     let pag = page.split('_').length > 2 ? (page.split('_')[1] + '_' + page.split('_')[2]).replace('s_', '') : page.replace('s_', '');
+    /* Adiciona o titulo do formulario */
     let titulo = page.split('_').length > 2 ? (page.split('_')[1] + '_' + page.split('_')[2]).replace('s_', ' ') : page.replace('s_', ' ');
+    /* Transforma a primeira letra do titulo em maiuscula */
     titulo = titulo[0].toUpperCase() + titulo.substr(1);
+    /* Com cada id fornecido de maneira logica para cada pasta e arquivo dentro do frontend com o nome do arquivo */
     fetch(`frontend/${fold}/${pag}.html`).then(function (response) {
         return response.text();
     }).then(function (html) {
-        //modalTelas.title_.innerText = titulo;
-        //modalTelas.show();
-        //modalTelas.body_.innerHTML = html;
-        main.innerHTML = html
+        main.innerHTML = html;
+        /* Carrega cada javascript proprio de cada pagina sem acarretar carregamento exarcebado em pagina unica */
         loadJS(`js/${fold}/${pag}.js`);
     }).catch(function (err) {
         console.log('Erro carregar a página ', err);
     });
 }
+/* Funcao que carrega cada arquivo unitario javascript para cada pagina */
 function loadJS(path) {
     document.body.querySelector('[data-id="pageScript"]') != null ? document.body.querySelector('[data-id="pageScript"]').remove() : '';
     if (path != '') {
@@ -75,9 +96,10 @@ function loadJS(path) {
     }
 
 }
-// variáveis do formulario
+// variáveis do formularios
 var formulario = null;
 var dadosformulario = null;
+/* Funcao assincrona que procura ceps */
 async function buscaCEP(cep) {
     cepedit = cep.replace(/\D/g, "");
     try {
@@ -89,29 +111,28 @@ async function buscaCEP(cep) {
         console.log(error);
     }
 }
-
+/* Responsavel por criar alertas no sistema via componente Toast */
 var toastContainer = document.getElementById('toastContainer')
-
-function createToast(mensagem, tipo = 'dark') {
-    let one = document.createElement('DIV')
-    one.classList.add("toast","align-items-center",`text-bg-${tipo}`,"border-0")
-    one.setAttribute('role', 'alert');
-    one.setAttribute('aria-live', 'assertive');
-    one.setAttribute('aria-atomic', 'true');
-    let two = document.createElement('DIV');
-    two.classList.add('d-flex');
-    let three = document.createElement('DIV');
-    three.classList.add('toast-body');
-    three.innerHTML = mensagem;
-    let four = document.createElement('BUTTON');
-    four.setAttribute('type', 'button');
-    four.setAttribute('data-bs-dismiss','toast');
-    four.setAttribute('aria-label','Close');
-    four.classList.add("btn-close","btn-close-white","me-2","m-auto");
-    two.append(three);
-    two.append(four);
-    one.append(two);
-    toastContainer.append(one);
-    let testToast = bootstrap.Toast.getOrCreateInstance(one);
-    testToast.show();
+function displayToast(mensagem, tipo = 'dark') {
+    let toast_main = document.createElement('DIV')
+    toast_main.classList.add("toast","align-items-center",`text-bg-${tipo}`,"border-0")
+    toast_main.setAttribute('role', 'alert');
+    toast_main.setAttribute('aria-live', 'assertive');
+    toast_main.setAttribute('aria-atomic', 'true');
+    let toast_all = document.createElement('DIV');
+    toast_all.classList.add('d-flex');
+    let toast_body = document.createElement('DIV');
+    toast_body.classList.add('toast-body');
+    toast_body.innerHTML = mensagem;
+    let toast_close = document.createElement('BUTTON');
+    toast_close.setAttribute('type', 'button');
+    toast_close.setAttribute('data-bs-dismiss','toast');
+    toast_close.setAttribute('aria-label','Close');
+    toast_close.classList.add("btn-close","btn-close-white","me-2","m-auto");
+    toast_all.append(toast_body);
+    toast_all.append(toast_close);
+    toast_main.append(toast_all);
+    toastContainer.append(toast_main);
+    let alerta = bootstrap.Toast.getOrCreateInstance(toast_main);
+    alerta.show();
 }
