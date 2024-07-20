@@ -1,9 +1,13 @@
-let retornarMenu = document.querySelector('.ret-pesquisa');
+if (typeof retornarMenu === 'undefined' || retornarMenu === null) {
+    var retornarMenu = document.querySelector('.ret-pesquisa');
+}
+
 retornarMenu.addEventListener('click', function(e){
     e.preventDefault();
     carregarPagina(paginas['pesquisas'], main);
 });
 document.querySelector('table.pesquisa_fornecedor').addEventListener('click', function(e){
+    console.log('estou entrando aqui?');
     e.preventDefault();
     if(e.target.classList.contains('historico_fornecedor')){
         fetch(`frontend/pesquisas/fornecedor/historicoFornecedor.html`).then(function (response) {
