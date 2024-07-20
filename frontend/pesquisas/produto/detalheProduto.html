@@ -1,0 +1,86 @@
+<div class="card-body">
+    <form id="formDetalheProduto">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <label for="situacao" class="form-label">Situação:</label>
+                <select class="form-select" name="situacao">
+                    <option value="AT">ATIVO</option>
+                    <option value="IN">INATIVO</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <label class="form-label" for="codigo">Código:</label>
+                <input type="text" class="form-control" name="codigo">
+            </div>
+            <div class="col-sm-12 col-md-9">
+                <label for="descricao" class="form-label">Descrição:</label>
+                <input type="text" class="form-control" name="descricao">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <label for="pesobruto" class="form-label">Peso Bruto:</label>
+                <input type="text" class="form-control" name="pesobruto">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="pesoliquido" class="form-label">Peso Líquido:</label>
+                <input type="text" class="form-control" name="pesoliquido">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="marca" class="form-label">Marca:</label>
+                <input type="text" class="form-control" name="marca">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="unidmedida" class="form-label">Un. de Medida:</label>
+                <select class="form-select" name="unidmedida">
+                    <option value="UN">Unidade</option>
+                    <option value="L">Litro</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <label for="valorvenda" class="form-label">Valor de Venda:</label>
+                <input type="text" class="form-control" name="valorvenda">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="customedio" class="form-label">Custo Médio:</label>
+                <input type="text" class="form-control" name="customedio">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="grupo" class="form-label">Grupo:</label>
+                <select class="form-select" name="grupo">
+                    <option value="SEL">GP PRINCIP.</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="subgrupo" class="form-label">Subgrupo:</label>
+                <select class="form-select">
+                    <option value="SEL">SELECIONE</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <label for="custoanual" class="form-label">Custo Atual:</label>
+                <input type="text" class="form-control" name="custoatual">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="estoqueminimo" class="form-label">Estoque Mínimo:</label>
+                <input type="text" class="form-control" name="estoqueminimo">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="estoquemaximo" class="form-label">Estoque Máximo:</label>
+                <input type="text" class="form-control" name="estoquemaximo">
+            </div>
+        </div>
+        <div class="row m-3">
+            <div class="col-12 d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" id="salvarProduto">Salvar</button>
+                <button type="button" class="ms-2 btn btn-danger" id="limparProduto">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>
