@@ -6,7 +6,6 @@ retornarMenu.addEventListener('click', function(e){
     carregarPagina(paginas['pesquisas'], main);
 });
 document.querySelector('table.pesquisa_transportadora').addEventListener('click', function(e){
-    console.log('estou entrando aqui?');
     e.preventDefault();
     if(e.target.classList.contains('historico_transportadora')){
         fetch(`frontend/pesquisas/transportadora/historicoTransportadora.html`).then(function (response) {
@@ -20,7 +19,7 @@ document.querySelector('table.pesquisa_transportadora').addEventListener('click'
             console.log('Erro carregar a página ', err);
         });
     }
-    if(e.target.classList.contains('detalhes_transportadora')){
+    if(e.target.classList.contains('detalhe_transportadora')){
         fetch(`frontend/pesquisas/transportadora/detalheTransportadora.html`).then(function (response){
             return response.text();
         }).then(function (html){

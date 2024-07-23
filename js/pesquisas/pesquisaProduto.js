@@ -19,7 +19,7 @@ document.querySelector('table.pesquisa_produto').addEventListener('click', funct
             console.log('Erro carregar a página ', err);
         });
     }
-    if(e.target.classList.contains('detalhes_produto')){
+    if(e.target.classList.contains('detalhe_produto')){
         fetch(`frontend/pesquisas/Produto/detalheProduto.html`).then(function (response){
             return response.text();
         }).then(function (html){

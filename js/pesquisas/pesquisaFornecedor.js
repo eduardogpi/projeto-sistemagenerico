@@ -7,7 +7,7 @@ retornarMenu.addEventListener('click', function(e){
     carregarPagina(paginas['pesquisas'], main);
 });
 document.querySelector('table.pesquisa_fornecedor').addEventListener('click', function(e){
-    console.log('estou entrando aqui?');
+    
     e.preventDefault();
     if(e.target.classList.contains('historico_fornecedor')){
         fetch(`frontend/pesquisas/fornecedor/historicoFornecedor.html`).then(function (response) {
@@ -21,7 +21,7 @@ document.querySelector('table.pesquisa_fornecedor').addEventListener('click', fu
             console.log('Erro carregar a página ', err);
         });
     }
-    if(e.target.classList.contains('detalhes_fornecedor')){
+    if(e.target.classList.contains('detalhe_fornecedor')){
         fetch(`frontend/pesquisas/fornecedor/detalheFornecedor.html`).then(function (response){
             return response.text();
         }).then(function (html){

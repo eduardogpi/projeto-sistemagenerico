@@ -19,7 +19,7 @@ document.querySelector('table.pesquisa_cliente').addEventListener('click', funct
             console.log('Erro carregar a página ', err);
         });
     }
-    if(e.target.classList.contains('detalhes_cliente')){
+    if(e.target.classList.contains('detalhe_cliente')){
         fetch(`frontend/pesquisas/cliente/detalheCliente.html`).then(function (response){
             return response.text();
         }).then(function (html){
