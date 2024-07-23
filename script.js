@@ -4,7 +4,10 @@ var nvecollapse = new bootstrap.Collapse('#sidebarMenu', {
     toggle: false
 });
 
-
+if (typeof retornarMenu === 'undefined' || retornarMenu === null) {
+    var retornarMenu = document.querySelector('.retornar');
+    console.log('entre aqui?');
+}
 function carregarPagina(url, dom_fragment_recipient) {
     if (url == undefined) { 
         alert('sem url ainda...'); 

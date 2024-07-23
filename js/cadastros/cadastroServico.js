@@ -1,5 +1,5 @@
 //Retorno ao menu principal
-document.querySelector('.ret-cadastro').addEventListener('click', function(e){
+retornarMenu.addEventListener('click', function(e){
     e.preventDefault();
     carregarPagina(paginas['cadastros'], main);
 })
