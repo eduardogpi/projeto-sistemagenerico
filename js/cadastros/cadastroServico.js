@@ -1,6 +1,8 @@
 //Retorno ao menu principal
 if (typeof retornarMenu === 'undefined' || retornarMenu === null) {
     var retornarMenu = document.querySelector('.retornar');
+}else{
+    retornarMenu = document.querySelector('.retornar');
 }
 retornarMenu.addEventListener('click', function(e){
     e.preventDefault();

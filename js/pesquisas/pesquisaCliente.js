@@ -1,5 +1,7 @@
 if (typeof retornarMenu === 'undefined' || retornarMenu === null) {
     var retornarMenu = document.querySelector('.ret-pesquisa');
+}else{
+    retornarMenu = document.querySelector('.retornar');
 }
 retornarMenu.addEventListener('click', function(e){
     e.preventDefault();
