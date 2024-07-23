@@ -1,1 +1,3 @@
-console.log('permissoes usuario');
+if (typeof retornarMenu === 'undefined' || retornarMenu === null) {
+    var retornarMenu = document.querySelector('.retornar');
+}
