@@ -39,7 +39,7 @@ paginas = {
     'home': 'home',
     'cadastros': 'frontend/cadastros/cadastroIndex.html',
     'pesquisas': 'frontend/pesquisas/pesquisaIndex.html',
-    'ordemservicos': 'frontend/ordems/ordemIndex.html',
+    'ordemservicos': 'frontend/ordens/ordemIndex.html',
     'vendas': 'frontend/vendas/vendaIndex.html',
     'compras': 'frontend/compras/compraIndex.html',
     'configuracoes': 'frontend/configuracoes/configuracoeIndex.html',
